@@ -1,0 +1,18 @@
+.main-container {
+  display: flex;
+  flex-direction: row;
+  padding: 0 5em 0 5em;
+}
+
+.main-container__editor {
+  align-items: left;
+  display: flex;
+  flex-direction: column;
+  flex: 4;
+}
+
+.main-container__results {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+}
