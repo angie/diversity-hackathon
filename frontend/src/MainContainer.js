@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Section from './components/Section';
+import Warning from './components/Warning';
 import './MainContainer.css';
 
 class MainContainer extends Component {
@@ -12,7 +13,10 @@ class MainContainer extends Component {
           <Section title={'Body'} content={'The content of our text box'} />
           <Section title={'Keywords'} content={'The content of our text box'} />
         </div>
-        <div className="main-container__results">Hello</div>
+        <div className="main-container__results">
+          <Warning header="Diversity warning" headerColor="#d0021b" />
+          <Warning header="This article is best suited to" />
+        </div>
       </div>
     );
   }
