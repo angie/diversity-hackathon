@@ -8,10 +8,10 @@ class MainContainer extends Component {
     return (
       <div className="main-container">
         <div className="main-container__editor">
-          <Section title={'Title'} content={'The content of our text box'} />
-          <Section title={'Summary'} content={'The content of our text box'} />
-          <Section title={'Body'} content={'The content of our text box'} />
-          <Section title={'Keywords'} content={'The content of our text box'} />
+          <Section title={'Title'} contentHeight={1} content={'The content of our text box'} />
+          <Section title={'Summary'} contentHeight={4} content={'The content of our text box'} />
+          <Section title={'Body'} contentHeight={10} content={'The content of our text box'} />
+          <Section title={'Keywords'} contentHeight={1} content={'The content of our text box'} />
         </div>
         <div className="main-container__results">
           <Warning header="Diversity warning" headerColor="#d0021b" />
