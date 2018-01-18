@@ -1,0 +1,29 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --config nodemon.json index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/language": "1.1.0",
+    "@google-cloud/storage": "1.4.0",
+    "body-parser": "^1.18.2",
+    "content-type": "^1.0.4",
+    "express": "^4.16.2",
+    "moment": "^2.20.1",
+    "momentjs": "^2.0.0",
+    "mongodb": "^3.0.1",
+    "progress": "^2.0.0",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2",
+    "yargs": "10.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.11"
+  }
+}
