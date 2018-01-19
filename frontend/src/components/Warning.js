@@ -2,15 +2,28 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Warning.css';
 
-const Warning = props => (
-  <div className="warning">
-    <p className="warning__header" style={{ color: props.headerColor }}>
-      {props.header}
-    </p>
-    <p className="warning__body">{props.body}</p>
-    {props.positive ? 'Postive' : 'Negative'}
-  </div>
-);
+const Warning = props => {
+  if (!props.positive) {
+    return (
+      <div className="warning">
+        <p className="warning__header" style={{ color: props.headerColor }}>
+          {props.header}
+        </p>
+        <p className="warning__body">{props.body}</p>
+        {/* <p className="warning__body">{props.positive ? null : 'Negative'}</p> */}
+      </div>
+    );
+  }
+  return null;
+};
+//   <div className="warning">
+//     <p className="warning__header" style={{ color: props.headerColor }}>
+//       {props.header}
+//     </p>
+//     <p className="warning__body">{props.body}</p>
+//     {/* <p className="warning__body">{props.positive ? null : 'Negative'}</p> */}
+//   </div>
+// );
 
 Warning.propTypes = {
   headerColor: PropTypes.string,
@@ -22,7 +35,7 @@ Warning.propTypes = {
 Warning.defaultProps = {
   headerColor: 'black',
   body: "There are loads of things wrong with this article and it's quite concerning.",
-  positive: true
+  positive: false
 };
 
 export default Warning;

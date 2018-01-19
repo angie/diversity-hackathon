@@ -16,17 +16,20 @@ const Section = props => (
         <input type="text" value={props.content} onChange={() => console.log('changing')} />
       )}
     </div>
+    <button onClick={() => props.checkBias()}>Check</button>
   </div>
 );
 
 Section.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
-  contentHeight: PropTypes.number
+  contentHeight: PropTypes.number,
+  checkBias: PropTypes.func
 };
 
 Section.defaultProps = {
-  contentHeight: 4
+  contentHeight: 4,
+  checkBias: () => console.log('Checking bias')
 };
 
 export default Section;

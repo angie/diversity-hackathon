@@ -46,5 +46,5 @@ export const fetchData = (endpoint, options = {}) => dispatch => {
 
 export const fetchSentimentAnalysis = text => dispatch => {
   const url = config.sentimentAnalysisUrl;
-  return fetchData(url, { method: 'POST', body: { text } })(dispatch);
+  return fetchData(url, { method: 'POST', body: { text }, mode: 'no-cors' })(dispatch);
 };
