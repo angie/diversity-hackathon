@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import './Section.css';
 
@@ -19,14 +19,14 @@ const Section = props => (
   </div>
 );
 
-Section.PropTypes = {
-  title: PropTypes.string,
-  content: PropTypes.string,
-  contentHeight: PropTypes.number,
+Section.propTypes = {
+  title: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+  contentHeight: PropTypes.number
 };
 
 Section.defaultProps = {
-  contentHeight: 4,
+  contentHeight: 4
 };
 
 export default Section;
